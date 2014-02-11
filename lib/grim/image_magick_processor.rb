@@ -23,7 +23,7 @@ module Grim
       width   = options.fetch(:width,   Grim::WIDTH)
       density = options.fetch(:density, Grim::DENSITY)
       quality = options.fetch(:quality, Grim::QUALITY)
-      command = [@imagemagick_path, "-resize", width.to_s, "-antialias", "-render",
+      command = [@imagemagick_path, "-resize", width.to_s, "-antialias", "-render", "-flatten",
         "-quality", quality.to_s, "-interlace", "none", "-background", "white", 
         "-alpha", "remove", "-density", density.to_s, "#{Shellwords.shellescape(pdf.path)}[#{index}]", 
         "-colorspace", "sRGB", path]
