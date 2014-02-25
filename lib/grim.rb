@@ -6,7 +6,7 @@ module Grim
   attr_accessor :processor
 
   # Default resize output width, any positive integer
-  WIDTH = 1024
+  WIDTH = 2048
 
   # Default image quality, 1 to 100
   QUALITY = 100
